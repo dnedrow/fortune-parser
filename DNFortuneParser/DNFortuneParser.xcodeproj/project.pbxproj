@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BBBBED381D3890FF005183C4 /* Fortune.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBBED371D3890FF005183C4 /* Fortune.m */; };
 		BBCBED9B1D38744F006B3FF6 /* DNFortuneParser.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBCBED9A1D38744F006B3FF6 /* DNFortuneParser.h */; };
 		BBCBED9D1D38744F006B3FF6 /* DNFortuneParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCBED9C1D38744F006B3FF6 /* DNFortuneParser.m */; };
 /* End PBXBuildFile section */
@@ -25,6 +26,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		BBBBED361D3890FF005183C4 /* Fortune.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fortune.h; sourceTree = "<group>"; };
+		BBBBED371D3890FF005183C4 /* Fortune.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fortune.m; sourceTree = "<group>"; };
 		BBCBED971D38744F006B3FF6 /* libDNFortuneParser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDNFortuneParser.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		BBCBED9A1D38744F006B3FF6 /* DNFortuneParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DNFortuneParser.h; sourceTree = "<group>"; };
 		BBCBED9C1D38744F006B3FF6 /* DNFortuneParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNFortuneParser.m; sourceTree = "<group>"; };
@@ -62,6 +65,8 @@
 			children = (
 				BBCBED9A1D38744F006B3FF6 /* DNFortuneParser.h */,
 				BBCBED9C1D38744F006B3FF6 /* DNFortuneParser.m */,
+				BBBBED361D3890FF005183C4 /* Fortune.h */,
+				BBBBED371D3890FF005183C4 /* Fortune.m */,
 			);
 			path = DNFortuneParser;
 			sourceTree = "<group>";
@@ -123,6 +128,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BBCBED9D1D38744F006B3FF6 /* DNFortuneParser.m in Sources */,
+				BBBBED381D3890FF005183C4 /* Fortune.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,6 +254,7 @@
 				BBCBEDA21D38744F006B3FF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

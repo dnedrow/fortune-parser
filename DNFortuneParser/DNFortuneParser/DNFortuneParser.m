@@ -8,6 +8,12 @@
 
 #import "DNFortuneParser.h"
 
+@interface DNFortuneParser ()
+
+@property (weak, nonatomic) NSString *fileName;
+
+@end
+
 @implementation DNFortuneParser
 
 @end
