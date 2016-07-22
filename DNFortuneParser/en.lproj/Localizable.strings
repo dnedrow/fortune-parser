@@ -1,0 +1,13 @@
+/* No comment provided by engineer. */
+"Operation was unsuccessful." = "Operation was unsuccessful.";
+
+/* No comment provided by engineer. */
+"The file was not found." = "The file was not found.";
+
+/* No comment provided by engineer. */
+"Verify that you have the path correct." = "Verify that you have the path correct.";
+
+
+"A filename is required" = "A filename is required";
+"Verify that you have provided a filename." = "Verify that you have provided a filename.";
+"The file %@ was not found." = "The file %@ was not found.";

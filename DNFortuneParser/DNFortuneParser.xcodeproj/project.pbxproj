@@ -3,14 +3,30 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 46;
+	objectVersion = 47;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B62A6A191907106C5701938 /* startrek in Resources */ = {isa = PBXBuildFile; fileRef = 6B62A3B997138B7F375E9696 /* startrek */; };
+		BB5114F31D39FDF100D74EE7 /* startrek in Resources */ = {isa = PBXBuildFile; fileRef = 6B62A3B997138B7F375E9696 /* startrek */; };
+		BB80189D1D39DF5700257E3F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB80189F1D39DF5700257E3F /* InfoPlist.strings */; };
+		BB8018A31D39DF5800257E3F /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BB8018A51D39DF5800257E3F /* Localizable.strings */; };
+		BBA039E71D389A9500611A2B /* DNFortuneParserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BBA039E61D389A9500611A2B /* DNFortuneParserTests.m */; };
+		BBA039E91D389A9500611A2B /* libDNFortuneParser.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BBCBED971D38744F006B3FF6 /* libDNFortuneParser.a */; };
 		BBBBED381D3890FF005183C4 /* Fortune.m in Sources */ = {isa = PBXBuildFile; fileRef = BBBBED371D3890FF005183C4 /* Fortune.m */; };
 		BBCBED9B1D38744F006B3FF6 /* DNFortuneParser.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = BBCBED9A1D38744F006B3FF6 /* DNFortuneParser.h */; };
 		BBCBED9D1D38744F006B3FF6 /* DNFortuneParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BBCBED9C1D38744F006B3FF6 /* DNFortuneParser.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BBA039EA1D389A9500611A2B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BBCBED8F1D38744F006B3FF6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BBCBED961D38744F006B3FF6;
+			remoteInfo = DNFortuneParser;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		BBCBED951D38744F006B3FF6 /* CopyFiles */ = {
@@ -26,6 +42,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		6B62A3B997138B7F375E9696 /* startrek */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = startrek; sourceTree = "<group>"; };
+		6B62AEC2A2F5C045CDBB35E2 /* DNFortuneParserErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNFortuneParserErrors.h; sourceTree = "<group>"; };
+		BB80189E1D39DF5700257E3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BB8018A41D39DF5800257E3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BBA039E41D389A9500611A2B /* DNFortuneParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNFortuneParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BBA039E61D389A9500611A2B /* DNFortuneParserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DNFortuneParserTests.m; sourceTree = "<group>"; };
+		BBA039E81D389A9500611A2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BBBBED361D3890FF005183C4 /* Fortune.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Fortune.h; sourceTree = "<group>"; };
 		BBBBED371D3890FF005183C4 /* Fortune.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fortune.m; sourceTree = "<group>"; };
 		BBCBED971D38744F006B3FF6 /* libDNFortuneParser.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDNFortuneParser.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -34,6 +57,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BBA039E11D389A9500611A2B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBA039E91D389A9500611A2B /* libDNFortuneParser.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BBCBED941D38744F006B3FF6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -44,11 +75,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B62A69F0F27F43A4FEC1654 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6B62A3B997138B7F375E9696 /* startrek */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BBA039E51D389A9500611A2B /* DNFortuneParserTests */ = {
+			isa = PBXGroup;
+			children = (
+				BB80189F1D39DF5700257E3F /* InfoPlist.strings */,
+				BBA039E61D389A9500611A2B /* DNFortuneParserTests.m */,
+				BBA039E81D389A9500611A2B /* Info.plist */,
+			);
+			path = DNFortuneParserTests;
+			sourceTree = "<group>";
+		};
 		BBCBED8E1D38744F006B3FF6 = {
 			isa = PBXGroup;
 			children = (
+				BB8018A51D39DF5800257E3F /* Localizable.strings */,
 				BBCBED991D38744F006B3FF6 /* DNFortuneParser */,
+				BBA039E51D389A9500611A2B /* DNFortuneParserTests */,
 				BBCBED981D38744F006B3FF6 /* Products */,
+				6B62A69F0F27F43A4FEC1654 /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				BBCBED971D38744F006B3FF6 /* libDNFortuneParser.a */,
+				BBA039E41D389A9500611A2B /* DNFortuneParserTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -67,6 +120,7 @@
 				BBCBED9C1D38744F006B3FF6 /* DNFortuneParser.m */,
 				BBBBED361D3890FF005183C4 /* Fortune.h */,
 				BBBBED371D3890FF005183C4 /* Fortune.m */,
+				6B62AEC2A2F5C045CDBB35E2 /* DNFortuneParserErrors.h */,
 			);
 			path = DNFortuneParser;
 			sourceTree = "<group>";
@@ -74,6 +128,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BBA039E31D389A9500611A2B /* DNFortuneParserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BBA039EC1D389A9500611A2B /* Build configuration list for PBXNativeTarget "DNFortuneParserTests" */;
+			buildPhases = (
+				BBA039E01D389A9500611A2B /* Sources */,
+				BBA039E11D389A9500611A2B /* Frameworks */,
+				BBA039E21D389A9500611A2B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BBA039EB1D389A9500611A2B /* PBXTargetDependency */,
+			);
+			name = DNFortuneParserTests;
+			productName = DNFortuneParserTests;
+			productReference = BBA039E41D389A9500611A2B /* DNFortuneParserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BBCBED961D38744F006B3FF6 /* DNFortuneParser */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BBCBEDA01D38744F006B3FF6 /* Build configuration list for PBXNativeTarget "DNFortuneParser" */;
@@ -81,6 +153,7 @@
 				BBCBED931D38744F006B3FF6 /* Sources */,
 				BBCBED941D38744F006B3FF6 /* Frameworks */,
 				BBCBED951D38744F006B3FF6 /* CopyFiles */,
+				BB8018A21D39DF5800257E3F /* Resources */,
 			);
 			buildRules = (
 			);
@@ -100,13 +173,16 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "David Nedrow";
 				TargetAttributes = {
+					BBA039E31D389A9500611A2B = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					BBCBED961D38744F006B3FF6 = {
 						CreatedOnToolsVersion = 7.3.1;
 					};
 				};
 			};
 			buildConfigurationList = BBCBED921D38744F006B3FF6 /* Build configuration list for PBXProject "DNFortuneParser" */;
-			compatibilityVersion = "Xcode 3.2";
+			compatibilityVersion = "Xcode 6.3";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -118,11 +194,41 @@
 			projectRoot = "";
 			targets = (
 				BBCBED961D38744F006B3FF6 /* DNFortuneParser */,
+				BBA039E31D389A9500611A2B /* DNFortuneParserTests */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		BB8018A21D39DF5800257E3F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB8018A31D39DF5800257E3F /* Localizable.strings in Resources */,
+				6B62A6A191907106C5701938 /* startrek in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBA039E21D389A9500611A2B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB5114F31D39FDF100D74EE7 /* startrek in Resources */,
+				BB80189D1D39DF5700257E3F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		BBA039E01D389A9500611A2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BBA039E71D389A9500611A2B /* DNFortuneParserTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BBCBED931D38744F006B3FF6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -134,7 +240,54 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		BBA039EB1D389A9500611A2B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BBCBED961D38744F006B3FF6 /* DNFortuneParser */;
+			targetProxy = BBA039EA1D389A9500611A2B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BB80189F1D39DF5700257E3F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB80189E1D39DF5700257E3F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BB8018A51D39DF5800257E3F /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BB8018A41D39DF5800257E3F /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		BBA039ED1D389A9500611A2B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DNFortuneParserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.nedron.DNFortuneParserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BBA039EE1D389A9500611A2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = DNFortuneParserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = net.nedron.DNFortuneParserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		BBCBED9E1D38744F006B3FF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -238,6 +391,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BBA039EC1D389A9500611A2B /* Build configuration list for PBXNativeTarget "DNFortuneParserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BBA039ED1D389A9500611A2B /* Debug */,
+				BBA039EE1D389A9500611A2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		BBCBED921D38744F006B3FF6 /* Build configuration list for PBXProject "DNFortuneParser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

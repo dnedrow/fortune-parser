@@ -13,4 +13,13 @@
 
 @implementation Fortune
 
+-(id)initWithArray:(NSArray *)textArray andString:(NSString *)attribution {
+    self = [super init];
+    if(self) {
+        _text = [textArray copy];
+        _attribution = [attribution copy];
+    }
+    return self;
+}
+
 @end

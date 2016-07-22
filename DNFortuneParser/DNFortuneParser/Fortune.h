@@ -10,7 +10,9 @@
 
 @interface Fortune : NSObject
 
-@property (weak, nonatomic) NSString *text;
-@property (weak, nonatomic) NSString *author;
+@property (strong, nonatomic) NSArray *text;
+@property (strong, nonatomic) NSString *attribution;
+
+-(id)initWithArray:(NSArray *)textArray andString:(NSString *)attribution;
 
 @end

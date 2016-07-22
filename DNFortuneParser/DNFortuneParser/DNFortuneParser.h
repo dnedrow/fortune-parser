@@ -10,4 +10,6 @@
 
 @interface DNFortuneParser : NSObject
 
++ (NSArray *)parseFortunesFromFile:(NSString *)fileName error:(NSError **)outError;
+
 @end
