@@ -8,6 +8,7 @@
 
 #import "DNFortuneParser.h"
 #import "DNFortuneParserErrors.h"
+#import "Fortune.h"
 
 @interface DNFortuneParser ()
 @end
@@ -49,7 +50,7 @@
     NSStringEncoding stringEncoding;
     NSString *fileContents = [NSString stringWithContentsOfFile:fileName usedEncoding:&stringEncoding error:nil];
 
-    if(fileContents && (stringEncoding == kCFStringEncodingInvalidId)) {
+    if (fileContents && (stringEncoding == kCFStringEncodingInvalidId)) {
         CFStringEncoding cfStringEncoding = CFStringConvertNSStringEncodingToEncoding(stringEncoding);
         NSString *encodingName = (NSString *) CFStringGetNameOfEncoding(cfStringEncoding);
 
@@ -68,24 +69,49 @@
 
     NSMutableArray *fortune = [NSMutableArray new];
     NSMutableArray *parsedFortunes = [NSMutableArray new];
+    NSError *error;
 
-    for(NSString *line in fileLines) {
-        if(line.length > 1 && [[line substringWithRange:NSMakeRange(0, 2)] isEqualToString:@"%%"]) {
-            NSLog(@"%@", line); //Log comments.
+    for (NSString *line in fileLines) {
+        if (line.length > 1 && [[line substringWithRange:NSMakeRange(0, 2)] isEqualToString:@"%%"]) {
+            NSLog(@"%@", line); //Comment
         } else if (line.length > 0 && ![[line substringWithRange:NSMakeRange(0, 1)] isEqualToString:@"%"]) {
-            [fortune addObject:line];
+            if([self checkForAttributionWithString:line error:&error] && !(error)) {
+                NSLog(@">>>>> %@", line);
+            }
+            [fortune addObject:line]; //Text - Fortune body
+        } else if (line.length == 0) {
+            [fortune addObject:line]; //Empty line - Fortune body
         } else {
-            [parsedFortunes addObject:[fortune copy]];
+            [parsedFortunes addObject:[[Fortune alloc] initWithArray:[fortune copy] andString:@"Blah"]];
             [fortune removeAllObjects];
         }
     }
 
-    for(NSMutableArray *array in parsedFortunes) {
-        for(NSString *string in array) {
-            NSLog(string);
-        }
+    for (Fortune *fortune in parsedFortunes) {
+        NSLog(@"%@", fortune.text);
     }
     return nil;
 }
 
++(bool)checkForAttributionWithString:(NSString *)line error:(NSError **)outError{
+    // ^[\\s|\\t]+-- (.*)$
+    NSError *error;
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"^[\\s|\\t]+-- (.*)$" options:nil error:&error];
+    if (error) {
+        NSDictionary *userInfo = @{
+                NSLocalizedDescriptionKey : NSLocalizedString(@"Operation was unsuccessful.", nil),
+                NSLocalizedFailureReasonErrorKey : [NSString stringWithFormat:NSLocalizedString(@"Couldn't create regex with given pattern and options.", nil)],
+                NSLocalizedRecoverySuggestionErrorKey : NSLocalizedString(@"Verify the pattern.", nil)};
+
+        *outError = [NSError errorWithDomain:DNFortuneParserErrorDomain
+                                        code:RegexCreationFailed
+                                    userInfo:userInfo];
+        return nil;
+    }
+
+    NSRange textRange = NSMakeRange(0, line.length);
+    NSRange matchRange = [regex rangeOfFirstMatchInString:line options:NSMatchingReportProgress range:textRange];
+
+    return (matchRange.location != NSNotFound);
+}
 @end

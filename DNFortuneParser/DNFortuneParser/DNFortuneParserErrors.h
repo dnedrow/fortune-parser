@@ -16,7 +16,8 @@ static NSString *const DNFortuneParserErrorDomain = @"DNFortuneParserErrorDomain
 typedef NS_ENUM(NSInteger, DNFortuneParserErrorCodes) {
     FileNotFound,
     NoFileNameProvided,
-    FileEncodingInvalid
+    FileEncodingInvalid,
+    RegexCreationFailed
 };
 
 #endif /* DNFortuneParserErrors_h */
