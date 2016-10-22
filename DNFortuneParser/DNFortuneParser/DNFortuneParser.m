@@ -87,16 +87,15 @@
         }
     }
 
-    for (Fortune *fortune in parsedFortunes) {
-        NSLog(@"%@", fortune.text);
+    for (Fortune *thisFortune in parsedFortunes) {
+        NSLog(@"%@", thisFortune.text);
     }
     return nil;
 }
 
 +(bool)checkForAttributionWithString:(NSString *)line error:(NSError **)outError{
-    // ^[\\s|\\t]+-- (.*)$
     NSError *error;
-    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"^[\\s|\\t]+-- (.*)$" options:nil error:&error];
+    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:@"^[\\s|\\t]+-- (.*)$" options:0 error:&error];
     if (error) {
         NSDictionary *userInfo = @{
                 NSLocalizedDescriptionKey : NSLocalizedString(@"Operation was unsuccessful.", nil),

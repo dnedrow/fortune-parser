@@ -44,6 +44,8 @@
 /* Begin PBXFileReference section */
 		6B62A3B997138B7F375E9696 /* startrek */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = startrek; sourceTree = "<group>"; };
 		6B62AEC2A2F5C045CDBB35E2 /* DNFortuneParserErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DNFortuneParserErrors.h; sourceTree = "<group>"; };
+		BB25F9761D424B2B000A7738 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		BB25F9771D424B2C000A7738 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "en-US"; path = "en-US.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BB80189E1D39DF5700257E3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BB8018A41D39DF5800257E3F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BBA039E41D389A9500611A2B /* DNFortuneParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DNFortuneParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -253,6 +255,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BB80189E1D39DF5700257E3F /* en */,
+				BB25F9761D424B2B000A7738 /* en-US */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				BB8018A41D39DF5800257E3F /* en */,
+				BB25F9771D424B2C000A7738 /* en-US */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
